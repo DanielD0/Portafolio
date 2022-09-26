@@ -1,8 +1,12 @@
+import Description from "./components/Description";
 import Title from "./components/Title";
+import Technologies from "./components/Technologies";
 function App() {
   return (
-    <div>
-      <Title/>
+    <div className="back overflow-auto">
+        <Title texto='Daniel Diaz Hernandez'/>
+        <Description/>
+        <Technologies/>
     </div>
   );
 }

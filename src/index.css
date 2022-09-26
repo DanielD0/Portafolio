@@ -1,39 +1,51 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap,100');
 *
 {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins',sans-serif;
+  font-family: 'Press Start 2P', cursive;
 }
-
+body{
+  scroll-behavior: auto;
+}
+.back {
+  position: fixed;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#233142, #36506C);
+}
 .liquid
 {
   position: relative;
   width: 100%;
-  height: 600px;
+  height: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: black;
+
 }
 
 .liquid h2
 {
   position: absolute;
-  font-size: 10vw;
+  font-size: 3vw;
 
 }
 .liquid h2:nth-child(1)
 {
   color: #fff;
-  text-shadow: -2px 2px 0px #183654,
-  -4px 4px 0px #183654,
-  -6px 6px 0px #183654,
-  -8px 8px 0px #183654,
+  text-shadow: -2px 2px 0px #233142,
+  -4px 4px 0px #233142,
+  -6px 6px 0px #233142,
+  -8px 8px 0px #233142,
   -18px 18px 20px rgba(0,0,0,0.5),
   -18px 18px 50px rgba(0,0,0,0.5);
 }
@@ -51,6 +63,54 @@
   color: #2196f3;
   animation: animate 4s ease-in-out infinite;
 }
+.cup{
+  position: relative;
+  width: 220px;
+  height: 200px;
+  border: 8px solid #233142;
+  box-shadow: 0 0 0 12px #fff;
+  /* border-radius: 10px 10px 60px 75px; */
+  background: url('../src/assets/img/c0ff3.png');
+  background-repeat: repeat-x;
+  background-position: 0 130px;
+  animation: filling 6s infinite;
+}
+.cup .cup-handle{
+  width: 65px;
+  height: 120px;
+  border: 12px solid #fff;
+  /* border-radius: 20px 10px 50px 20px; */
+  position: absolute;
+  top: 10px;
+  right: -74px;
+}
+.cup .steam{
+  position: absolute;
+  /* border-radius: 2px 1px; */
+  width: 8px;
+  animation: steaming 6s infinite;
+}
+.cup .steam:nth-child(1){
+  top: -70px;
+  left: 65px;
+  height: 30px;
+  background: rgb(203 213 225);
+  animation-delay: 1s;
+}
+.cup .steam:nth-child(2){
+  top: -120px;
+  left: 95px;
+  height: 50px;
+  background: rgb(148 163 184);
+  animation-delay: 1s;
+}
+.cup .steam:nth-child(3){
+  top: -90px;
+  left: 125px;
+  height: 40px;
+  background: rgb(100 116 139);
+  animation-delay: 1s;
+}
 @keyframes animate {
   0%,100%
   {
@@ -58,5 +118,24 @@
   }
   50%{
     clip-path: polygon(0 66%, 14% 73%, 34% 76%, 50% 71%, 64% 62%, 79% 55%, 100% 51%, 100% 100%, 0% 100%);
+  }
+}
+@keyframes filling {
+  0%,100%{
+    background-position: 0 200px;
+  }
+  50%{
+    background-position: 600px -90px;
+  }
+}
+@keyframes steaming{
+  0%,100%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+    filter: blur(.8px);
+    transform: translateY(-10px);
+
   }
 }
