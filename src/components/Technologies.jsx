@@ -4,7 +4,7 @@ import { FaReact,FaHtml5,FaJs,FaCss3Alt,FaVuejs } from "react-icons/fa";
 import { SiTailwindcss } from "react-icons/si";
 const Technologies = () => {
   return (
-    <div className='mx-auto mt-10 bg-white'>
+    <div className='mx-auto mt-10 bg-white p-8'>
     <div className='text-gray-800 text-center'>
         <div className='text-4xl p-10'>Technologies</div>
         <div className='flex gap-20 justify-center'>

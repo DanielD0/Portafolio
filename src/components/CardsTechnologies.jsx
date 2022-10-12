@@ -1,4 +1,5 @@
 import React from 'react'
+import { FaStar } from "react-icons/fa";
 
 const CardsTechnologies = (props,) => {
   return (
@@ -7,7 +8,10 @@ const CardsTechnologies = (props,) => {
             <div className='h-32 w-full flex justify-center'>
             <div>{props.icono}</div>
             </div>
-            <div className='mt-10'>{props.title}</div>
+            <div className='flex justify-center'>
+              <FaStar className='h-8 w-8 text-yellow-500'/>
+            </div>
+            <div>{props.title}</div>
         </div>
     </div>
   )
