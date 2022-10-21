@@ -9,7 +9,7 @@ const CardsTechnologies = (props,) => {
             <div>{props.icono}</div>
             </div>
             <div className='flex justify-center'>
-              <FaStar className='h-8 w-8 text-yellow-500'/>
+              <FaStar className='h-8 w-8 text-yellow-500 star'/>
             </div>
             <div>{props.title}</div>
         </div>
